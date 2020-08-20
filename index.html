@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="shellContainer" class="shellContainer"> 
+        <h1>Blair's Etch-a-Sketch</h1>
+        <div id="drawContainer" class="drawContainer">
+        </div>
+        <div id="shellButtonContainer" class="flexContainer">
+            <div class="circle">
+
+            </div>
+                <div class="formContainer flexContainer">
+                    <div id="labelContainer" class="formContainer flexContainer flexContainer--vert">
+                        <label for="width">Width</label>
+                        <label for="height">Height</label>
+                        
+                    </div>
+                    <div id="inputContainer" class="formContainer flexContainer flexContainer--vert">
+                        <input type="text" id="widthInput" name="width" placeholder="16" value="16">
+                        <input type="text" id="heightInput" name="height" placeholder="16" value="16">
+                        <div id="aspectRatioLink"></div>
+                    </div>
+                    
+                    <button id="submitButton">Resize</button>
+                </div>
+            <div class="circle">
+
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
