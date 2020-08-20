@@ -18,8 +18,8 @@ h1 {
 }
 
 #drawContainer{
-    width: 500px;
-    height: 500px;
+    width: 502px;
+    height: 502px;
     border: solid 1px black;
     margin-top: 20px;
     margin-left: auto;
@@ -32,7 +32,8 @@ h1 {
     display: inline-block;
     background-color: rgb(240,240,240);
     transition: 0.1s;
-    border: solid 1px rgb(230,230,230)
+    border-style: solid;
+    border-color: rgb(230,230,230);
 }
 
 .gridPixel:hover {

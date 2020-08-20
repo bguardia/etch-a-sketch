@@ -27,26 +27,29 @@ function createDiv(obj){
 
 
 function createGrid(numRows, numCols){
-    let divWidth = (drawContainer.clientWidth /numCols) + "px";
-    let divHeight = (drawContainer.clientHeight /numRows) + "px";
+    let divWidth = (drawContainer.clientWidth /numCols);
+    let divHeight = (drawContainer.clientHeight /numRows);
+
+    let borderW = divWidth/(drawContainer.clientWidth/PRESET_WIDTH);
     let rowEl, divEl;
 
     console.log(`createGrid) clientWidth: ${drawContainer.clientWidth}, clientHeight: ${drawContainer.clientHeight}, divWidth: ${divWidth}, divHeight: ${divHeight}`);
-
+    console.log(`borderW: ${borderW}`);
     for(let i = 0; i < numRows; i++){
         
         rowEl = createDiv({
             className: "row",
             width: "100%",
-            height: divHeight
+            height: divHeight + "px"
         });
 
         for(let j = 0; j < numCols; j++){
 
             divEl = createDiv({
                 className: "gridPixel",
-                width: divWidth,
-                height: "100%"
+                width: divWidth + "px",
+                height: "100%",
+                borderWidth: borderW + "px"
             });
             
             rowEl.appendChild(divEl); 
