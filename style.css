@@ -8,6 +8,8 @@ h1 {
     text-align: center;
     color: white;
     font-size: 46px;
+    text-shadow: 0 0 3px rgb(0,0,0,0.75);
+    margin-top: 10px;
 }
 #shellContainer {
     width: 600px;
@@ -24,13 +26,19 @@ h1 {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    background-color: rgb(240,240,240);
 
 }
 
+.clearFix::before, .clearFix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
 
 .gridPixel {
     display: inline-block;
-    background-color: rgb(240,240,240);
+    /* background-color: rgb(240,240,240); */
     transition: 0.1s;
     border-style: solid;
     border-color: rgb(230,230,230);
@@ -48,12 +56,51 @@ h1 {
     background-color: rgb(75,75,75);
 }
 
+.circleContainer {
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+    display: inline-block; 
+}
+
 .circle {
     width: 75px;
     height: 75px;
+    font-size: 8px;
     background-color: rgb(225,225,225);
     border-radius: 50%;
-    display: inline-block;
+    
+    border: solid 1px rgb(240,240,240);
+    position: relative;
+}
+
+
+.circle--small {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#aspectRatioLink {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+#aspectRatioLink svg {
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
 }
 
 .flexContainer {
@@ -73,6 +120,7 @@ h1 {
 
 #inputContainer {
     width: 100px;
+    position: relative;
 }
 
 #labelContainer {
@@ -84,6 +132,8 @@ h1 {
     margin-top: 3.33%;
     line-height: 32px;
     font-size: 24px;
+    color: white;
+    text-shadow: 0 0 3px rgb(0,0,0,0.5);
 }
 
 #shellButtonContainer {

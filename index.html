@@ -10,11 +10,13 @@
 <body>
     <div id="shellContainer" class="shellContainer"> 
         <h1>Blair's Etch-a-Sketch</h1>
-        <div id="drawContainer" class="drawContainer">
+        <div id="drawContainer" class="drawContainer clearFix">
         </div>
         <div id="shellButtonContainer" class="flexContainer">
-            <div class="circle">
-
+            <div class="circleContainer">
+            <div id="drawModeKnob" class="circle">
+                <div class="circle circle--small"></div>
+            </div>
             </div>
                 <div class="formContainer flexContainer">
                     <div id="labelContainer" class="formContainer flexContainer flexContainer--vert">
@@ -25,14 +27,28 @@
                     <div id="inputContainer" class="formContainer flexContainer flexContainer--vert">
                         <input type="text" id="widthInput" name="width" placeholder="16" value="16">
                         <input type="text" id="heightInput" name="height" placeholder="16" value="16">
-                        <div id="aspectRatioLink"></div>
+                        <div id="aspectRatioLink">
+                            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" class="svg-lock">
+                                <rect style="stroke-width: 5px; fill: rgb(200, 168, 53); stroke: rgb(134, 108, 30);" x="124.339" y="208.601" width="251.719" height="190.138" rx="15" ry="15"/>
+                                <rect x="100" y="100" width="0.704" height="0.704" style="fill: rgb(216, 216, 216);"/>
+                                <path d="M 149.826 163.978 C 182.331 87.621 285.307 75.085 335.182 141.414 C 349.442 160.378 356.801 183.142 356.824 206.111 L 313.776 206.111 C 313.805 192.85 309.716 179.3 300.716 167.33 C 286.828 148.86 264.141 139.202 241.201 141.995 C 206.709 146.194 184.415 175.35 184.26 206.111 L 141.212 206.111 C 141.223 191.856 144.059 177.526 149.826 163.978 Z" style="fill: rgb(180, 179, 167); stroke: rgb(152, 152, 152);"/>
+                              </svg>
+                              <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" class="svg-lock hidden">
+                                <rect style="stroke-width: 5px; fill: rgb(200, 168, 53); stroke: rgb(134, 108, 30);" x="124.339" y="208.601" width="251.719" height="190.138" rx="15" ry="15"/>
+                                <rect x="100" y="100" width="0.704" height="0.704" style="fill: rgb(216, 216, 216);"/>
+                                <path d="M 340.746 163.714 C 346.513 177.262 349.349 191.592 349.36 205.847 L 306.312 205.847 C 306.157 175.086 283.863 145.93 249.371 141.731 C 226.431 138.938 203.744 148.596 189.856 167.066 C 189.088 168.088 188.355 169.121 187.658 170.165 L 149.994 149.027 C 151.667 146.338 153.465 143.709 155.39 141.15 C 205.265 74.821 308.241 87.357 340.746 163.714 Z" style="fill: rgb(216, 216, 216);"/>
+                              </svg>
+
+                        </div>
                     </div>
                     
                     <button id="submitButton">Resize</button>
                 </div>
+                <div class="circleContainer">
             <div class="circle">
-
+                <div class="circle circle--small"></div>
             </div>
+        </div>
         </div>
         
     </div>
